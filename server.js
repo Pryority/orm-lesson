@@ -14,6 +14,6 @@ app.use(routes);
 // turn on connection to db and server
 // NOTE: if { force: false } were set to true, it would drop and re-create all of the database tables on startup.
 // This definition performs similarly to DROP TABLE IF EXISTS
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
     app.listen(PORT, () => console.log('Now listening.'));
 });
